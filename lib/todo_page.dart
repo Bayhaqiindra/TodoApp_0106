@@ -48,12 +48,21 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Container(
-            width: double.infinity, // Lebar maksimum
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16), // Padding untuk kenyamanan
+            width: double.infinity, 
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16), 
             decoration: BoxDecoration(
               color: Colors.teal,
-              borderRadius: BorderRadius.circular(8), // Membuat sudut lebih halus
+              borderRadius: BorderRadius.circular(8),
             ),
+            child: const Text(
+              "Task added successfully",
+              textAlign: TextAlign.left, 
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white,
+                fontWeight: FontWeight.w400, 
+          ),
+        ),
           ),
         ),
       );
