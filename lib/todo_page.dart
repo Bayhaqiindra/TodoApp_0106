@@ -23,4 +23,8 @@ class TaskManagerScreen extends StatefulWidget {
   @override
   State<TaskManagerScreen> createState() => _TaskManagerScreenState();
 }
-    
+
+class _TaskManagerScreenState extends State<TaskManagerScreen> {
+  final _taskController = TextEditingController();
+  DateTime? _selectedDate;
+}
