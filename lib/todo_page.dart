@@ -79,4 +79,33 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
       _tasks[index]['done'] = !_tasks[index]['done'];
     });
   }
+
+void _showCupertinoDatePicker(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    builder: (BuildContext builder) {
+      return SizedBox(
+        height: 300,
+        child: Column(
+          children: [
+            Expanded(
+              child: CupertinoDatePicker(
+                mode: CupertinoDatePickerMode.date,
+                initialDateTime: _selectedDate ?? DateTime.now(),
+                minimumYear: 2000,
+                maximumYear: 2100,
+                onDateTimeChanged: (DateTime newDate) {
+                  setState(() {
+                    _selectedDate = newDate;
+                    _dateError = null;
+                  });
+                },
+              ),
+            ),
+          ],
+        ),
+      );
+    },
+  );
+}
 }
