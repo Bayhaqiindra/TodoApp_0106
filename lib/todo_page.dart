@@ -161,4 +161,11 @@ void _showCupertinoDatePicker(BuildContext context) {
                 errorText: _taskError,
               ),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: _addTask,
+              child: const Text("Submit"),
+            ),
+            const SizedBox(height: 16),
+            const Text("List Tasks", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
 }
