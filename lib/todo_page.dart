@@ -168,4 +168,13 @@ void _showCupertinoDatePicker(BuildContext context) {
             ),
             const SizedBox(height: 16),
             const Text("List Tasks", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Expanded(
+              child: ListView.builder(
+                itemCount: _tasks.length,
+                itemBuilder: (context, index) {
+                  final task = _tasks[index];
+                  return Card(
+                    color: task['done'] ? Colors.green.shade50 : Colors.red.shade50,
+                    child: ListTile(
+                      title: Text(task['task'], style: const TextStyle(fontWeight: FontWeight.bold)),
 }
