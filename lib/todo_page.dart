@@ -16,3 +16,11 @@ class TaskManagerApp extends StatelessWidget {
     );
   }
 }
+
+class TaskManagerScreen extends StatefulWidget {
+  const TaskManagerScreen({super.key});
+
+  @override
+  State<TaskManagerScreen> createState() => _TaskManagerScreenState();
+}
+    
