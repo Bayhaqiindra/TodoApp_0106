@@ -193,5 +193,18 @@ void _showCupertinoDatePicker(BuildContext context) {
                           ),
                         ],
                       ),
-
+                      trailing: Checkbox(
+                        value: task['done'],
+                        onChanged: (_) => _toggleTaskStatus(index),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
