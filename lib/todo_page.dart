@@ -103,6 +103,10 @@ void _showCupertinoDatePicker(BuildContext context) {
                 },
               ),
             ),
+            TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text("Done", style: TextStyle(fontSize: 16)),
+            )
           ],
         ),
       );
