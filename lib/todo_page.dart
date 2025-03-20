@@ -44,6 +44,19 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
       });
       _taskController.clear();
       _selectedDate = null;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Container(
+            width: double.infinity, // Lebar maksimum
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16), // Padding untuk kenyamanan
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.circular(8), // Membuat sudut lebih halus
+            ),
+          ),
+        ),
+      );
     }
   });
 }
