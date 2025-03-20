@@ -113,4 +113,12 @@ void _showCupertinoDatePicker(BuildContext context) {
     },
   );
 }
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Task Manager'),
+        centerTitle: true,
+      ),
 }
