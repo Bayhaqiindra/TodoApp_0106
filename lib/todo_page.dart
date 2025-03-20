@@ -35,3 +35,16 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
   setState(() {
     _taskError = _taskController.text.isEmpty ? "Task tidak boleh kosong!" : null;
     _dateError = _selectedDate == null ? "Tanggal harus dipilih!" : null;
+
+    if (_taskError == null && _dateError == null) {
+      _tasks.add({
+        'task': _taskController.text,
+        'date': _selectedDate!,
+        'done': false,
+      });
+      _taskController.clear();
+      _selectedDate = null;
+    }
+  });
+}
+}
