@@ -73,4 +73,10 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
       }
     });
   }
+
+  void _toggleTaskStatus(int index) {
+    setState(() {
+      _tasks[index]['done'] = !_tasks[index]['done'];
+    });
+  }
 }
