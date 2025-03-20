@@ -136,5 +136,18 @@ void _showCupertinoDatePicker(BuildContext context) {
                   border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(8),
                 ),
-
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      _selectedDate == null
+                          ? "Select a date"
+                          : "${_selectedDate!.day}-${_selectedDate!.month}-${_selectedDate!.year}",
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    const Icon(Icons.calendar_today),
+                  ],
+                ),
+              ),
+            ),
 }
