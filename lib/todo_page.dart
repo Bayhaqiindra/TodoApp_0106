@@ -177,4 +177,21 @@ void _showCupertinoDatePicker(BuildContext context) {
                     color: task['done'] ? Colors.green.shade50 : Colors.red.shade50,
                     child: ListTile(
                       title: Text(task['task'], style: const TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Deadline: ${task['date'].day}-${task['date'].month}-${task['date'].year}",
+                            style: const TextStyle(fontSize: 14),
+                          ),
+                          Text(
+                            task['done'] ? "Done" : "Not Done",
+                            style: TextStyle(
+                              color: task['done'] ? Colors.green : Colors.red,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+
 }
