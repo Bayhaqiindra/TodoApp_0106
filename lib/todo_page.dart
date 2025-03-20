@@ -27,4 +27,7 @@ class TaskManagerScreen extends StatefulWidget {
 class _TaskManagerScreenState extends State<TaskManagerScreen> {
   final _taskController = TextEditingController();
   DateTime? _selectedDate;
+  final List<Map<String, dynamic>> _tasks = [];
+  String? _taskError;
+  String? _dateError;
 }
