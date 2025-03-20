@@ -30,4 +30,8 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
   final List<Map<String, dynamic>> _tasks = [];
   String? _taskError;
   String? _dateError;
-}
+
+  void _addTask() {
+  setState(() {
+    _taskError = _taskController.text.isEmpty ? "Task tidak boleh kosong!" : null;
+    _dateError = _selectedDate == null ? "Tanggal harus dipilih!" : null;
