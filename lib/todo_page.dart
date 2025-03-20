@@ -150,4 +150,15 @@ void _showCupertinoDatePicker(BuildContext context) {
                 ),
               ),
             ),
+            if (_dateError != null) Text(_dateError!, style: const TextStyle(color: Colors.red)),
+            const SizedBox(height: 8),
+            const Text("Task:", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            TextField(
+              controller: _taskController,
+              decoration: InputDecoration(
+                hintText: "Enter your Task",
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                errorText: _taskError,
+              ),
+            ),
 }
