@@ -121,4 +121,20 @@ void _showCupertinoDatePicker(BuildContext context) {
         title: const Text('Task Manager'),
         centerTitle: true,
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text("Task Date:", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            GestureDetector(
+              onTap: () => _showCupertinoDatePicker(context),
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 8),
+                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+
 }
